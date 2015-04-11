@@ -10,11 +10,12 @@ One goal of this library was to be able to access the GPIO pins as a non-root us
 
 1. Why not create a binding for WiringPi?
 
-I considered it, but I needed a library that allowed GPIO access as a non-root user.  I couldn't figure out non-root access with WiringPi, so I wrote my own.
+    I considered it, but I needed a library that allowed GPIO access as a non-root user.  I couldn't figure out non-root access with WiringPi, so I wrote my own.
 
-Another downside of wrapping WiringPi is that I think the external dependency will complicate putting the library in QuickLisp.
+    Another downside of wrapping WiringPi is that I think the external dependency will complicate putting the library in QuickLisp.
 
 2. What is libgpio?
-libgpio is a small shared library that reads and writes to the psuedo-files in /sys/class/gpio/*.  This should be possible in pure Lisp, but for some reason the sys file system hates the  buffering that SBCL's library does.
+
+    libgpio is a small shared library that reads and writes to the psuedo-files in /sys/class/gpio/*.  This should be possible in pure Lisp, but for some reason the sys file system hates the  buffering that SBCL's library does.
 
 
