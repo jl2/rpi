@@ -17,7 +17,7 @@
 # Build libgpio.so
 
 libgpio.so: gpio.c Makefile
-	gcc -shared -Wl,-soname,libgpio.so.1 -o libgpio.so -fPIC -O2 -Wall gpio.c
+	gcc -shared -o libgpio.so -fPIC -O2 -Wall gpio.c
 
 .PHONY: install
 
